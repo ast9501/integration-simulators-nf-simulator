@@ -34,7 +34,7 @@ services:
 
   netconf-server:
     container_name: netconf-server
-    image: onap/org.onap.integration.nfsimulator.netconfserver:latest
+    image: onap/org.onap.integration.nfsimulator.netconfserver:1.0.1 #latest
     ports:
       - "830:830"
       - "6513:6513"
@@ -50,7 +50,7 @@ services:
 #
 # AVCN - manager
   avcn-manager:
-    image: onap/org.onap.integration.nfsimulator.avcnmanager:latest
+    image: onap/org.onap.integration.nfsimulator.avcnmanager:1.0.1 #latest
     ports:
       - "9090:8080"
     restart: on-failure

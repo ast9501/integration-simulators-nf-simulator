@@ -4,7 +4,9 @@ services:
 
   ves:
     container_name: ves
-    image: nexus3.onap.org:10003/onap/org.onap.dcaegen2.collectors.ves.vescollector:latest
+    image: nexus3.onap.org:10001/onap/org.onap.dcaegen2.collectors.ves.vescollector:1.11.0 #latest
+    environment:
+      - DMAAPHOST="192.168.20.17:3904"
     ports:
       - "8080:8080"
       - "8443:8443"
