@@ -1,4 +1,0 @@
-[submodule "integration-simulators-nf-simulator-ves-client"]
-	path = integration-simulators-nf-simulator-ves-client
-	url = git@gitlab.com:nctuwinlab/o-ran/integration-simulators-nf-simulator.git
-	#url = https://github.com/onap/integration-simulators-nf-simulator-ves-client.git
