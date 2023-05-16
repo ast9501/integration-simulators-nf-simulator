@@ -4,12 +4,12 @@ all: start
 
 start:
 	@echo "##### start (dmaap sim,ves,ves-client sim) #####"
-	make -C ../../ves-client start
+	make -C ../../integration-simulators-nf-simulator-ves-client start
 	@echo "##### DONE #####"
 
 stop:
 	@echo "##### Stop (dmaap sim,ves,ves-client sim)  #####"
-	make -C ../../ves-client stop
+	make -C ../../integration-simulators-nf-simulator-ves-client stop
 	@echo "##### DONE #####"
 
 reconfigure-ves-url:
@@ -21,6 +21,12 @@ generate-event:
 	@echo "##### Trigger VES client to generate event #####"
 	curl -X  POST http://localhost:5000/simulator/event -d @events/eventToVes.json --header "Content-Type: application/json"
 	@echo "\n##### DONE #####"
+
+generate-fault-event:
+	@echo "##### Trigger VES client to generate fault event #####"
+	curl -X  POST http://localhost:5000/simulator/event -d @events/sampleFaultEvent.json --header "Content-Type: application/json"
+	@echo "\n##### DONE #####"
+
 
 generate-multiple-events:
 	@echo "\n##### Trigger VES client to generate multiple events #####"
